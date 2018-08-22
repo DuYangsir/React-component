@@ -1,0 +1,41 @@
+.pf-list {
+  margin-top: 10px;
+
+  .pf-list-header {
+    padding: 15px 15px 9px 15px;
+    font-size: 14px;
+    color: #888;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pf-list-footer {
+    padding: 9px 15px 15px 15px;
+    font-size: 14px;
+    color: #888;
+  }
+
+  .pf-list-body {
+    position: relative;
+    background-color: #fff;
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+      transform: scaleY(0.5);
+      background-color: #ddd;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+  }
+}

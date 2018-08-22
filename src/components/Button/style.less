@@ -1,0 +1,51 @@
+@brand-primary: #108ee9;
+@brand-primary-tap: #0e80d2;
+@brand-success: #6abf47;
+@brand-warning: #ffc600;
+@brand-error: #f4333c;
+@fill-disabled: #ddd;
+@color-text-disabled: #bbb;
+@color-text-base-inverse: #fff;
+
+.pf-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: @color-text-base-inverse;
+
+  &.pf-button-large {
+    border-radius: 10px;
+    font-size: 18px;
+    height: 47px;
+    line-height: 47px;
+  }
+
+  &.pf-button-mini {
+    border-radius: 7px;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  &.pf-button-primary {
+    background-color: @brand-primary;
+  }
+
+  &.pf-button-success {
+    background-color: @brand-success;
+  }
+
+  &.pf-button-warning {
+    background-color: @brand-warning;
+  }
+
+  &.pf-button-error {
+    background-color: @brand-error;
+  }
+
+  &.is-disabled {
+    color: @color-text-disabled;
+    background-color: @fill-disabled;
+    cursor: not-allowed;
+  }
+}
