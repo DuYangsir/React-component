@@ -6,6 +6,7 @@
 @fill-disabled: #ddd;
 @color-text-disabled: #bbb;
 @color-text-base-inverse: #fff;
+@color-text-normal: #404040;
 
 .pf-button {
   display: flex;
@@ -14,17 +15,27 @@
   color: @color-text-base-inverse;
 
   &.pf-button-large {
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 18px;
     height: 47px;
     line-height: 47px;
   }
 
   &.pf-button-mini {
-    border-radius: 7px;
+    border-radius: 5px;
     font-size: 13px;
     height: 30px;
     line-height: 30px;
+  }
+
+  &.pf-button-normal {
+    color: @color-text-normal;
+    border: 1px solid @fill-disabled;
+    background-color: @color-text-base-inverse;
+
+    .iconfont {
+      color: @color-text-normal;
+    }
   }
 
   &.pf-button-primary {
@@ -43,9 +54,24 @@
     background-color: @brand-error;
   }
 
+  &.pf-button-primary,
+  &.pf-button-success,
+  &.pf-button-warning,
+  &.pf-button-error {
+    .iconfont {
+      color: @color-text-base-inverse;
+    }
+  }
+
   &.is-disabled {
     color: @color-text-disabled;
-    background-color: @fill-disabled;
+    opacity: 0.6;
+    background-color: @color-text-base-inverse;
+    border: 1px solid @color-text-disabled;
     cursor: not-allowed;
+  }
+
+  &.is-block {
+    border-radius: 0;
   }
 }

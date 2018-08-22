@@ -1,0 +1,22 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import './style.less'
+
+class WhiteSpace extends Component {
+  render() {
+    const { size } = this.props
+    const whitespaceClass = classNames('pf-whitespace', `pf-whitespace-${size}`)
+    return <div className={whitespaceClass} />
+  }
+}
+
+WhiteSpace.propTypes = {
+  size: PropTypes.string
+}
+
+WhiteSpace.defaultProps = {
+  size: 'lg'
+}
+
+export default WhiteSpace

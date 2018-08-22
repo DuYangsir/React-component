@@ -14,8 +14,10 @@ export default class ListDemo extends Component {
           renderHeader={() => '公司信息'}
           renderFooter={() => '以上信息仅供参考'}
         >
+          <Item arrow leftIcon="right" leftIconColor="#6abf47" extra="稳健性">
+            风险评估预测检查
+          </Item>
           <Item extra="前海天下资本管理">基金公司</Item>
-          <Item arrow>产品经理</Item>
           <Item extra="备案号、成立日期、投资顾问" arrow>
             产品基本要素
           </Item>

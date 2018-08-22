@@ -124,6 +124,7 @@ export default class ButtonDemo extends Component {
         <SelectTabs data={this.state.data}
           onSelect={this.returnSelect}
         />
+        <h6>screenType类型 0:仅在“筛选中出现”，1：在“普通tab上显示”，2：两者都有显示</h6>
       </div>
     )
   }

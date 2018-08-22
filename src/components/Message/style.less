@@ -1,0 +1,21 @@
+@MessagePreCls: pf-message;
+
+.@{MessagePreCls} {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 15px;
+  font-size: 14px;
+  position: relative;
+
+  .@{MessagePreCls}-icon,
+  .@{MessagePreCls}-close {
+    line-height: 19px;
+  }
+
+  .@{MessagePreCls}-close {
+    font-size: 14px;
+    position: absolute;
+    right: 2px;
+  }
+}

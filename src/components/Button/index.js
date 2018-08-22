@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import Icon from '../Icon/index'
 import './style.less'
 
@@ -14,16 +15,25 @@ class Button extends Component {
       className,
       icon,
       onClick,
-      disabled
+      disabled,
+      block
     } = this.props
 
+    const buttonClass = classNames(
+      'pf-button',
+      `pf-button-${type}`,
+      `pf-button-${size}`,
+      {
+        [`is-disabled`]: disabled
+      },
+      {
+        [`is-block`]: block
+      },
+      `${className}`
+    )
+
     return (
-      <a
-        className={`pf-button pf-button-${type} ${
-          disabled ? 'is-disabled' : ''
-        } pf-button-${size} ${className}`}
-        onClick={disabled ? noop : onClick}
-      >
+      <a className={buttonClass} onClick={disabled ? noop : onClick}>
         {icon ? <Icon name={icon} /> : null}
         <span>{children}</span>
       </a>
@@ -37,15 +47,17 @@ Button.propTypes = {
   type: PropTypes.string,
   size: PropTypes.string,
   disabled: PropTypes.bool,
+  block: PropTypes.bool,
   onClick: PropTypes.func
 }
 
 Button.defaultProps = {
   className: '',
   icon: '',
-  type: 'primary',
+  type: 'normal',
   size: 'large',
   disabled: false,
+  block: false,
   onClick: noop
 }
 

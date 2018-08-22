@@ -15,6 +15,7 @@
     padding-right: 15px;
     display: flex;
     flex: 1;
+    align-items: center;
     position: relative;
 
     &.pf-list-inline-long {
@@ -22,6 +23,7 @@
 
       .pf-list-content {
         padding-bottom: 0;
+        display: inline-block;
       }
 
       .pf-list-extra {
@@ -43,6 +45,12 @@
       height: 1px;
       background-color: #ddd;
       transform: scaleY(0.5);
+    }
+
+    .pf-list-image-left {
+      display: inline-block;
+      height: 15px;
+      line-height: 15px;
     }
 
     .pf-list-content,
@@ -73,6 +81,11 @@
       align-items: center;
       display: flex;
       justify-content: flex-end;
+
+      &.pf-list-extra-fix {
+        flex: 1;
+        flex-basis: inherit;
+      }
     }
 
     .pf-list-arrow {
@@ -82,7 +95,8 @@
       padding-left: 5px;
 
       .iconfont {
-        margin: 0;
+        line-height: 19px;
+        height: 19px;
       }
     }
   }

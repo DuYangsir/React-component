@@ -1,0 +1,27 @@
+.pf-list-view {
+  background-color: #fff;
+
+  .pf-list-view-loading {
+    padding: 20px;
+    text-align: center;
+    color: #888;
+  }
+}
+
+.loading-animate {
+  position: relative;
+  top: 2px;
+  color: #ff6600;
+  transition: all 1s ease;
+  animation: circle 1.5s infinite 0s linear;
+  line-height: 20px;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

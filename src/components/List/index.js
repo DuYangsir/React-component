@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Item from './listItem'
 import './style.less'
 
-function noop() {}
-
 class List extends Component {
   static Item = Item
   render() {
@@ -26,11 +24,6 @@ class List extends Component {
 List.propTypes = {
   renderHeader: PropTypes.func,
   renderFooter: PropTypes.func
-}
-
-List.defaultProps = {
-  renderHeader: noop,
-  renderFooter: noop
 }
 
 export default List

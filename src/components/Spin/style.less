@@ -1,0 +1,55 @@
+@SpinPreCls: pf-spin;
+
+.@{SpinPreCls} {
+  overflow: hidden;
+
+  .@{SpinPreCls}-icon-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 5px;
+    z-index: 999;
+    transform: translateX(-47%) translateY(-50%);
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    .@{SpinPreCls}-icon {
+      flex: 1;
+
+      .iconfont {
+        font-size: 60px;
+        width: 66px;
+        height: 63px;
+        line-height: 66px;
+        margin: 0;
+        transition: all 1s ease;
+        animation: circle 1.5s infinite 0s linear;
+      }
+    }
+  }
+
+  .@{SpinPreCls}-mask {
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 998;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
