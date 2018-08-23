@@ -1,17 +1,17 @@
 const merge = require('webpack-merge')
 const common = require('./webpack.config.common.js')
+const sitConfig = require('./webpack.config.sit.js')
+const apiConfig = require('./webpack.config.api.js')
 const developConfig = require('./webpack.config.development.js')
-const productionConfig = require('./webpack.config.production.js')
 
 let config = {}
-const TARGET = process.env.npm_lifecycle_event
+const APP_ENV = process.env.NODE_ENV
 
-if (TARGET === 'start') {
-  config = merge(common, developConfig)
-}
-
-if (TARGET === 'build') {
-  config = merge(common, productionConfig)
+if (APP_ENV === 'development') {
+  config = merge(common, sitConfig)
+  config = merge(config, developConfig)
+} else {
+  config = merge(common, apiConfig)
 }
 
 module.exports = config

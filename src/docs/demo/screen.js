@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import SelectTabs from '../../components/SelectTabs'
-
-
+import { SelectTabs } from '../../components/index'
 
 export default class ButtonDemo extends Component {
   constructor(props){

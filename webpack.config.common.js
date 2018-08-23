@@ -1,40 +1,6 @@
-const path = require('path')
 const autoprefixer = require('autoprefixer')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const config = {
-  entry: {
-    App: './index.js'
-  },
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
-  },
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      title: 'component',
-      template: './index.html',
-      inject: true,
-      chunks: ['App']
-    })
-  ],
-  // externals: {
-  //   react: {
-  //     root: 'React',
-  //     commonjs2: 'react',
-  //     commonjs: 'react',
-  //     amd: 'react'
-  //   },
-  //   'react-dom': {
-  //     root: 'ReactDOM',
-  //     commonjs2: 'react-dom',
-  //     commonjs: 'react-dom',
-  //     amd: 'react-dom'
-  //   }
-  // },
   module: {
     rules: [
       {

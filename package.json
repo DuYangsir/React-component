@@ -5,8 +5,7 @@
   "main": "index.js",
   "author": "",
   "scripts": {
-    "start": "webpack-dev-server --hot --open",
-    "build": "webpack"
+    "start": "NODE_ENV=development webpack-dev-server --hot --open"
   },
   "dependencies": {
     "autoprefixer": "^9.1.1",
